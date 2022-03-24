@@ -3,7 +3,6 @@ Dado('que acesso a página de cadastro') do
 end
   
   Quando('submeto o seguinte formulário de cadastro:') do |table|
-    sleep 2
 
     find("a[class='button button--secondary']", match: :first).click
 
@@ -11,8 +10,8 @@ end
     user = table.hashes.first
     log user
 
-    find("#user_name").set user[:nome]
-    find("#user_email").set user[:email]
+    find("#user_name").set Faker::Name.name
+    find("#user_email").set Faker::Internet.free_email
     find("#user_password").set user[:senha]
     find("#user_password_confirmation").set user[:senha]
 
