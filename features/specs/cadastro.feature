@@ -12,7 +12,7 @@ Funcionalidade: Cadastro de usuário
         Dado que acesso a página de cadastro
         Quando submeto o seguinte formulário de cadastro:
             | nome             | email                   | senha     |
-            | Laylla Rodrigues | laylla+aut@youse.com.br | Youse123* |
+            | Laylla Rodrigues | laylla+aut3@youse.com.br | Youse123* |
         Então sou direcionado para a home do usuário
 
 

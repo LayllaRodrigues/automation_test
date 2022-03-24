@@ -3,10 +3,23 @@ Dado('que acesso a página de cadastro') do
 end
   
   Quando('submeto o seguinte formulário de cadastro:') do |table|
-    # table is a Cucumber::MultilineArgument::DataTable
-    pending # Write code here that turns the phrase above into concrete actions
+    sleep 2
+
+    find("a[class='button button--secondary']", match: :first).click
+
+    log table.hashes
+    user = table.hashes.first
+    log user
+
+    find("#user_name").set user[:nome]
+    find("#user_email").set user[:email]
+    find("#user_password").set user[:senha]
+    find("#user_password_confirmation").set user[:senha]
+
+    click_button    "enviar cadastro"
   end
   
   Então('sou direcionado para a home do usuário') do
-    pending # Write code here that turns the phrase above into concrete actions
+    expect(current_url).to eq("https://qa.youse.io/account")
+
   end
