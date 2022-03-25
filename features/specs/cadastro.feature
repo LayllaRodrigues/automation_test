@@ -1,14 +1,15 @@
 #language: pt
 
-@cadastro
+
 Funcionalidade: Cadastro de usuário
     Sendo o dono de um veiculo
     Quero fazer meu cadastro na Youse
     Para que possa comprar e gerenciar minhas apólices logado
 
+    @cadastro
     Cenário: Fazer cadastro
 
-        Dado que acesso a página de cadastro
+        Dado que acesso a página principal
         Quando submeto o seguinte formulário de cadastro:
             | nome             | email                    | senha     |
             | Laylla Rodrigues | laylla+aut3@youse.com.br | Youse123* |
@@ -17,7 +18,7 @@ Funcionalidade: Cadastro de usuário
 
     Esquema do Cenário: Tentativa de Cadastro
 
-        Dado que acesso a página de cadastro
+        Dado que acesso a página principal
         Quando submeto o formulário de cadastro:
             | nome         | email         | senha         |
             | <nome_input> | <email_input> | <senha_input> |

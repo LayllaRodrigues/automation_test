@@ -1,6 +1,3 @@
-Dado('que acesso a página de cadastro') do
-    visit "/users/email_verifications/new"
-end
   
   Quando('submeto o seguinte formulário de cadastro:') do |table|
 
