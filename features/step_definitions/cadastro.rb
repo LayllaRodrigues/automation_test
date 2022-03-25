@@ -10,8 +10,8 @@ end
     user = table.hashes.first
     log user
 
-    find("#user_name").set Faker::Name.name
-    find("#user_email").set Faker::Internet.free_email
+    find("#user_name").set  Faker::Name.name
+    find("#user_email").set  Faker::Internet.free_email
     find("#user_password").set user[:senha]
     find("#user_password_confirmation").set user[:senha]
 

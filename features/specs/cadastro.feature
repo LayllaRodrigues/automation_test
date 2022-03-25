@@ -1,6 +1,6 @@
 #language: pt
 
-
+@cadastro
 Funcionalidade: Cadastro de usuário
     Sendo o dono de um veiculo
     Quero fazer meu cadastro na Youse
