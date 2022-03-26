@@ -1,8 +1,17 @@
   
-  Quando('submeto minhas credenciais {string} e {string}') do |string, string2|
-    pending # Write code here that turns the phrase above into concrete actions
+  Quando('submeto minhas credenciais {string} e {string}') do |email,senha|
+    find('#email').set email
+    click_button 'próximo passo'
+
+    find('#user_password').set senha
+    click_button 'entrar'
   end
   
   Então('sou direcionada para a home do cliente') do
-    pending # Write code here that turns the phrase above into concrete actions
+    expect(page).to have_css ".account-header"
+  end
+
+  Então('vejo o alerta: {string}') do |expect_alert|
+    alert = find(".flash-message__text")
+    expect(alert.text).to eql expect_alert
   end
