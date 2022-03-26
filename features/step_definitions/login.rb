@@ -11,7 +11,3 @@
     expect(page).to have_css ".account-header"
   end
 
-  Então('vejo o alerta: {string}') do |expect_alert|
-    alert = find(".flash-message__text")
-    expect(alert.text).to eql expect_alert
-  end
