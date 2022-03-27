@@ -11,6 +11,7 @@ Funcionalidade: cotação auto
 
         Dado que acesso a página de ofertas e seleciono o produto auto
         Quando preencho meus dados cadastrais
+        E preencho os dados do veiculo
         E seleciono meu plano
         E realizo o pagamento
         Então minha apólice é emitida 
