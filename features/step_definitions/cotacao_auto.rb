@@ -42,16 +42,13 @@ Dado('que acesso a página de ofertas e seleciono o produto auto') do
   end
   
   Quando('realizo o pagamento') do
-    card = "4111111111111111"
+    card = 4111111111111111
 
     find('li[data-offer-refused-all]',visible: false).click
 
     find('.adyen-checkout__card__cardNumber__input > iframe').click
-    find('input[id="encryptedCardNumber"]').set card
-
-    sleep 10
-
-
+    sleep 2
+    find('#encryptedCardNumber',visible: false).set card
 
 
   end
